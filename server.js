@@ -16,7 +16,7 @@ const port = process.env.port || 5000
 
 app.use(cors());
 app.use(express.json())
-app.use(express.static('client/build'));
+
 
 // end middleware
 
@@ -35,6 +35,9 @@ const usersRouter = require('./routes/users')
 app.use('/exercises', exercisesRouter)
 app.use('/users', usersRouter)
 // end Routes
+
+app.use(express.static('client/build'));
+
 app.listen(port, () => {
     console.log(`server is running on port: ${port}`)
 })

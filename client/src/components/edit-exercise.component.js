@@ -36,7 +36,7 @@ export default class EditExercise extends Component {
       console.log(error)
     })
 
-    axios.get(BACKEND_URL + "/users/")
+    axios.get(BACKEND_URL + "users/")
     .then((response) => {
         this.setState({
           users: response.data.map((user) => 

@@ -23,7 +23,7 @@ export default class EditExercise extends Component {
   }
 
   componentDidMount() {
-    axios.get(BACKEND_URL + "/exercises/" + this.props.match.params.id)
+    axios.get(BACKEND_URL + "exercises/" + this.props.match.params.id)
     .then((response) => {
           this.setState({
             username: response.data.username,
